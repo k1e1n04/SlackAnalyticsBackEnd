@@ -1,0 +1,2 @@
+# SlackAnalyticsBackEnd
+SlackAnalyticsアプリケーションのREST APIです。
