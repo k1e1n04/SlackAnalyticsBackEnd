@@ -4,7 +4,9 @@ from . import views
 app_name = 'analytics'
 
 urlpatterns = [
-    path('organization/list/',views.OrganizaionList.as_view())
+    path('organization/list/',views.OrganizaionList.as_view()),
+    path('organization/list/',views.OrganizaionList.as_view()),
+
     # path('',views.BaseDashboard.as_view(),name='base_dashboard'),
     # #サマリー
     # path('summary',views.SummaryView.as_view(),name='summary'),

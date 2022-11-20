@@ -35,13 +35,13 @@ class User(AbstractBaseUser, PermissionsMixin):
         Organization,
         on_delete=models.CASCADE,
         verbose_name='団体',
-        default="",
+        default=1,
     )
     base = models.ForeignKey(
         Base,
         on_delete=models.CASCADE,
         verbose_name='団体',
-        default=""
+        default=1
     )
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
