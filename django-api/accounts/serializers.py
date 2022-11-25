@@ -1,11 +1,8 @@
-from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework import serializers
+from .models import User
 
-#トークンを発行するためのクラス
-class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+class UserSerializer(serializers.ModelSerializer):
 
-    @classmethod
-    def get_token(cls, user):
-        token = super(MyTokenObtainPairSerializer, cls).get_token(user)
-
-        # Add custom claims
-        return token
+    class Meta:
+        model = User
+        fields = ('name','organization', 'base', 'is_superuser')
