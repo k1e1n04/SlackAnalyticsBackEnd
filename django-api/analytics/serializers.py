@@ -8,7 +8,7 @@ class PostSerializer(serializers.ModelSerializer):
         model = Post
         fields = ('organization', 'base', 'channel', 'employee', 'created_at')
 
-class OrganizaionSerializer(serializers.ModelSerializer):
+class OrganizationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Organization
@@ -18,7 +18,7 @@ class BaseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Base
-        fields = ('name','created_at')
+        fields = ('id','name','created_at','updated_at')
 
 class DepartmentSerializer(serializers.ModelSerializer):
 
